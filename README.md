@@ -21,7 +21,7 @@ Here are some projects that I've done at App Academy.
   *You can exit any game by typing "quit".*
 
 
-  To play chess:
+  To play Chess:
 
   ```
   $ ruby chess/chess_game.rb
