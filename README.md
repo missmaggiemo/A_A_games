@@ -6,7 +6,7 @@ Here are some projects that I've done at App Academy.
 
 0. Install [Ruby](https://www.ruby-lang.org/en/) (if you haven't already)-- these games are written in Ruby.
 
-1. Fork this repo and/or download a zip file and open it up.
+1. Clone/fork/download the zip file of this repo and open it up on your machine.
 
 2. Open the terminal.
 
