@@ -248,7 +248,7 @@ class Minesweeper
     
     if save_response.split('').include?("Y")
       serialized = self.to_yaml
-      File.open("chess/minesweep_games/#{@file_name}", "w") {|file| file.write(serialized)}
+      File.open("minesweeper/minesweep_games/#{@file_name}", "w") {|file| file.write(serialized)}
     end
     
     puts "\nThanks for playing Minesweeper!"
