@@ -12,35 +12,35 @@ Here are some projects that I've done at App Academy.
 
 3. In the terminal, navigate to "A_A_projects" (or whatever you named it).
 
-```
-$ cd ~/Downloads/A_A_projects
-```
+  ```
+  $ cd ~/Downloads/A_A_projects
+  ```
 
 4. Play a game.
 
-*You can exit any game by typing "quit".*
+  *You can exit any game by typing "quit".*
 
 
-To play chess:
+  To play chess:
 
-```
-$ ruby chess/chess_game.rb
-```
+  ```
+  $ ruby chess/chess_game.rb
+  ```
 
 
-To play Minesweeper:
-```
-$ ruby minesweeper/minesweeper.rb
-```
+  To play Minesweeper:
+  ```
+  $ ruby minesweeper/minesweeper.rb
+  ```
 
-To play Hangman:
-```
-$ ruby hangman/hangman.rb
-```
+  To play Hangman:
+  ```
+  $ ruby hangman/hangman.rb
+  ```
 
-To play Mastermind:
-```
-$ ruby mastermind/mastermind.rb
-```
+  To play Mastermind:
+  ```
+  $ ruby mastermind/mastermind.rb
+  ```
 
 Enjoy!
