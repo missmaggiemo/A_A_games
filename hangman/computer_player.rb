@@ -22,7 +22,7 @@ class ComputerPlayer
   
   
   def get_guess
-    puts "Word: #{@game.transform_for_display}"
+    puts "Word: #{@game.transform_for_display.split('').join(' ')}"
     @game.guess = @viable_letters.shift
     puts "Computer guess: #{@game.guess}"
   end
@@ -68,10 +68,5 @@ class ComputerPlayer
     @game.secret_word = Hangman::WORDS.sample.upcase
   end
   
-  # def transform_for_display
-#     secret = @game.secret_word.dup
-#     (@game.secret_word.split('') - @game.correct_list).each {|letter| secret.gsub!(letter, '_')}
-#     secret
-#   end
-#   
+ 
 end

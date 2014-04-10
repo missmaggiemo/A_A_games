@@ -1,9 +1,9 @@
-load 'human_player.rb'
-load 'computer_player.rb'
+load 'hangman/human_player.rb'
+load 'hangman/computer_player.rb'
 
 class Hangman
   
-  WORDS = File.readlines('dictionary.txt').map{|line| line.chomp}
+  WORDS = File.readlines('hangman/dictionary.txt').map{|line| line.chomp}
   
   attr_accessor :secret_word, :guess, :guess_list, :body_part, :secret_word, :correct_list, :secret_word_length, :wrong_list
   
@@ -19,6 +19,7 @@ class Hangman
   end
   
   def play
+    system('clear')
     set_players
     @master_player.pick_secret_word
     @guessing_player.play
@@ -74,3 +75,6 @@ class Hangman
   end
   
 end
+
+
+Hangman.new.play

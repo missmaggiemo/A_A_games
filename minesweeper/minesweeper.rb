@@ -44,7 +44,7 @@ class Minesweeper
   
   def get_level
     while @level.nil?
-      puts "What level would you like tyo play at? EASY  MEDIUM  HARD  MAXIMUM"
+      puts "What level would you like to play at? EASY  MEDIUM  HARD  MAXIMUM"
       user_level = gets.chomp.upcase
       if %w(EASY MEDIUM MED HARD MAXIMUM MAX).include?(user_level)
         case user_level
@@ -248,7 +248,7 @@ class Minesweeper
     
     if save_response.split('').include?("Y")
       serialized = self.to_yaml
-      File.open("minesweep_games/#{@file_name}", "w") {|file| file.write(serialized)}
+      File.open("chess/minesweep_games/#{@file_name}", "w") {|file| file.write(serialized)}
     end
     
     puts "\nThanks for playing Minesweeper!"
@@ -271,7 +271,7 @@ class Minesweeper
   
   def load_old_game
     old_game = ''
-    games = Dir.entries("minesweep_games")
+    games = Dir.entries("minesweeper/minesweep_games")
     while old_game.empty?
       puts "\nPlease choose a game file to load:"
       puts games
@@ -283,7 +283,7 @@ class Minesweeper
       end
     end
     
-    YAML::load_file("minesweep_games/#{old_game}").play(new = false)
+    YAML::load_file("minesweeper/minesweep_games/#{old_game}").play(new = false)
     
     return true
     

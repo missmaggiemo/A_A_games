@@ -38,7 +38,7 @@ class Mastermind
   end
   
   def quit?
-    @guess.downcase == 'quit'
+    @guess.downcase.split('').include?('q')
   end
   
   def parse_guess
@@ -77,3 +77,4 @@ class Mastermind
   
 end
 
+Mastermind.new.play

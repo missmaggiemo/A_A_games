@@ -19,17 +19,24 @@ class HumanPlayer
   end
   
   
-  
-  
   def get_guess
-    puts "Word: #{@game.transform_for_display}"
-    puts "Guess list: #{@game.guess_list}"
-    puts "Guess?"
-    @game.guess = gets.chomp
+    @game.guess = ''
+    while @game.guess.empty?
+      puts "Word: #{@game.transform_for_display.split('').join(' ')}"
+      puts "Guess list: #{@game.guess_list}"
+      puts "Guess?"
+      user_guess = gets.chomp.upcase
+      if user_guess.match(/[A-Z]/) && !@game.guess_list.include?(user_guess)
+        @game.guess = user_guess
+      elsif user_guess == 'QUIT'
+        @game.guess = user_guess
+      end
+      puts("Please guess again.") if @game.guess.empty?
+    end
   end
   
   def quit?
-    @game.guess.downcase == 'quit'
+    @game.guess == 'QUIT'
   end
   
   def normalize_guess
@@ -39,6 +46,7 @@ class HumanPlayer
   def feedback
     if @game.guess_right?
       puts "Yay! #{@game.guess} is in the secret word!\n\n"
+      puts "You win! The secret word was #{@game.secret_word}." if @game.won?
     else
       puts "Oh no! You guessed wrong. We have to draw your #{@game.body_part}.\n\n"
       puts "Sorry, the hangman died! You lose. Word was #{@game.secret_word}.\n\n" if @game.lost?

@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-load 'chess_pieces.rb'
+load 'chess/chess_pieces.rb'
 require "colorize"
 
 class Board

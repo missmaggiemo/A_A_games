@@ -1,5 +1,5 @@
-load "chess_board.rb"
-load "chess_players.rb"
+load "chess/chess_board.rb"
+load "chess/chess_players.rb"
 require "yaml"
 
 
