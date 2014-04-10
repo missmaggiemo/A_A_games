@@ -40,7 +40,7 @@ $ ruby hangman/hangman.rb
 
 To play Mastermind:
 ```
-$ruby mastermind/mastermind.rb
+$ ruby mastermind/mastermind.rb
 ```
 
 Enjoy!
