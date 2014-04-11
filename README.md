@@ -73,4 +73,4 @@ On the "client":
   
 The "server" player must run the file first, then the "client" player. The game will not start without a client player.  
   
-## Enjoy!
+### Enjoy!
