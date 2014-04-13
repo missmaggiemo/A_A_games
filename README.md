@@ -39,6 +39,12 @@ Here are some projects that I've done at App Academy.
   $ ruby minesweeper/minesweeper.rb
   ```
   
+  
+  To play Poker:
+  ```
+  $ ruby poker/lib/poker_game.rb
+  ```
+  
 
   To play Hangman:
   ```
