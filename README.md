@@ -13,7 +13,7 @@ Here are some projects that I've done at App Academy.
 3. In the terminal, navigate to "A_A_games" (or whatever you named it).
 
   ```
-  $ cd ~/Downloads/A_A_projects
+  $ cd ~/Downloads/A_A_games
   ```
 
 4. Play a game.
