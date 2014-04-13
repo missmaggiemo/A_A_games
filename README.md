@@ -10,7 +10,7 @@ Here are some projects that I've done at App Academy.
 
 2. Open the terminal.
 
-3. In the terminal, navigate to "A_A_projects" (or whatever you named it).
+3. In the terminal, navigate to "A_A_games" (or whatever you named it).
 
   ```
   $ cd ~/Downloads/A_A_projects
