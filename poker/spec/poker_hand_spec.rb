@@ -232,6 +232,25 @@ describe PokerHand do
     end
 
   end
+  
+  describe '#sort' do
+    let(:hand) {PokerHand.new([
+      PokerCard.new(:hearts, :deuce),
+      PokerCard.new(:clubs, :ace),
+      PokerCard.new(:hearts, :king),
+      PokerCard.new(:diamonds, :king),
+      PokerCard.new(:diamonds, :deuce)
+    ])}
+    
+    it 'returns a sorted hand' do
+      expect(hand.sort).to eq([PokerCard.new(:hearts, :deuce),
+                               PokerCard.new(:diamonds, :deuce),
+                               PokerCard.new(:hearts, :king),
+                               PokerCard.new(:diamonds, :king),
+                               PokerCard.new(:clubs, :ace)
+                             ])
+    end
+  end
 
   
 
