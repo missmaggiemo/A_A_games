@@ -284,7 +284,7 @@ class PokerGame
     if best.hand.find_two_pair_cards.sort == player.hand.find_two_pair_cards.sort
       return handle_high_card_tie(best, player)
     else
-      (0..1).each do |i|
+      (0..3).each do |i|
         if best.hand.find_two_pair_cards[i] > player.hand.find_two_pair_cards[i]
           return best
         else

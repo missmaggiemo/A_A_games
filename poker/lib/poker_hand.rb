@@ -131,6 +131,8 @@ class PokerHand
     false
   end
   
+  # find specific cards for tie-breaker comparison
+  
   def find_pair_card
     @hand_hash.each do |key, value| 
       if value == 2

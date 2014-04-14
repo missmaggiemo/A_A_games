@@ -161,6 +161,41 @@ describe PokerHand do
         expect(full_house_hand.find_poker_subsets).to eq(6)
       end
     end
+    
+    
+    # ties are handled in the game, not in the hand class-- ties would be between hands. but there are a few methods within the hand class that make tie-breaking easier.
+    
+    describe '#find_pair_card' do
+      it "finds a card of the pair in a poker hand with a pair" do
+        full_house_hand.update_hand_hash
+        expect(full_house_hand.find_pair_card).to eq(PokerCard.new(:hearts, :king))
+      end
+    end
+
+    describe '#find_triple_card' do
+      it "finds a card of the triple in a poker hand with a triple" do
+        full_house_hand.update_hand_hash
+        expect(full_house_hand.find_triple_card).to eq(PokerCard.new(:hearts, :ace))
+      end
+    end
+    
+    describe '#find_two_pair_cards' do
+      it "finds two cards-- one of each of the pairs in a poker hand with two pairs" do
+        two_pair_hand.update_hand_hash
+        expect(two_pair_hand.find_two_pair_cards).to eq([PokerCard.new(:hearts, :ace),
+                                                         PokerCard.new(:clubs, :ace),
+                                                         PokerCard.new(:hearts, :king),
+                                                         PokerCard.new(:diamonds, :king)])
+      end
+    end
+    
+    describe '#find_quad_card' do
+      it "finds a card of the quadruple in a poker hand with a quadruple" do
+        quad_hand.update_hand_hash
+        expect(quad_hand.find_quad_card).to eq(PokerCard.new(:hearts, :ace))
+      end
+    end
+    
 
   end
 
@@ -198,28 +233,7 @@ describe PokerHand do
 
   end
 
-  # handle ties-- strict tie (hands are completely equal) or 'next steps' (highest subset is equal)-- or eliminate the need for ties?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 end

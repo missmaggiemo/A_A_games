@@ -68,7 +68,7 @@ class PokerCard
 
   # Compares two cards to see if they're equal in poker value-- number value only, ace = 14.
   
-  # == method is used in 'delete'
+  # == method is used in 'delete'-- cards of the same value and suit must be ==, not just same poker_value
   
   def ==(other_card)
     return false if other_card.nil?

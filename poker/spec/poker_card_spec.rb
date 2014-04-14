@@ -18,7 +18,7 @@ describe PokerCard do
   describe "#==" do
     let(:card1) {PokerCard.new(:hearts, :queen)}
     let(:card2) {PokerCard.new(:hearts, :king)}
-    let(:card3) {PokerCard.new(:spades, :queen)}
+    let(:card3) {PokerCard.new(:hearts, :queen)}
 
     it "non-same (e.g., queen of hearts and king of spades) cards are not equal" do
       expect(card1 == card2).to be_false
