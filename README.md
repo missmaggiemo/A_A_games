@@ -4,7 +4,7 @@ Here are some projects that I've done at App Academy.
 
 ### Here's how to use the contents of this file.
 
-0. Install [Ruby](https://www.ruby-lang.org/en/) (if you haven't already)-- these games are written in Ruby.
+0. Install [Ruby](https://www.ruby-lang.org/en/) 2.0.0 (if you haven't already)-- these games are written in Ruby.
 
 1. Clone/fork/download the zip file of this repo and open it up on your machine.
 
