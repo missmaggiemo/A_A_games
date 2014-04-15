@@ -1,4 +1,4 @@
-load 'lib/poker_card.rb'
+load 'poker/lib/poker_card.rb'
 
 class PokerDeck
   attr_accessor :cards

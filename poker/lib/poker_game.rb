@@ -1,6 +1,6 @@
-load 'lib/poker_hand.rb'
-load 'lib/poker_player.rb'
-load 'lib/poker_deck.rb'
+load 'poker/lib/poker_hand.rb'
+load 'poker/lib/poker_player.rb'
+load 'poker/lib/poker_deck.rb'
 require 'colorize'
 
 class PokerGame
@@ -199,7 +199,7 @@ class PokerGame
     user_bet = 0
     first_bet = @current_bet
     until user_bet > first_bet
-      puts "Your bankroll is #{player.bankroll}."
+      puts "Your bankroll is $#{player.bankroll}."
       puts "The current bet is $#{@current_bet}. To RAISE, you must bet more. How much do you want to bet?"
       user_bet = gets.chomp.scan(/\d+/).first.to_i
       if user_bet > first_bet

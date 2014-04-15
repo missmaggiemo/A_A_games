@@ -1,5 +1,5 @@
-load 'lib/poker_card.rb'
-load 'lib/poker_deck.rb'
+load 'poker/lib/poker_card.rb'
+load 'poker/lib/poker_deck.rb'
 
 class PokerHand
 
